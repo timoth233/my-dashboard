@@ -7,7 +7,7 @@ function Register() {
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
-    name: '',
+    fullname: '',
     email: '',
     password: ''
   });
@@ -29,7 +29,7 @@ function Register() {
 
     try {
       await register(
-        form.name,
+        form.fullname,
         form.email,
         form.password
       );
@@ -54,7 +54,7 @@ function Register() {
         )}
 
         <input
-          name="name"
+          name="fullname"
           className="form-control mb-3"
           placeholder="Full Name"
           value={form.name}
